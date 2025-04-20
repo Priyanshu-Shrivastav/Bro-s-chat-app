@@ -1,10 +1,21 @@
+import Post from '../post/Post';
+import Share from '../share/Share';
+import {Posts} from '../../DummyData.js'
+
 import './feed.css';
 
 
 const Feed = () => {
     return <>
-        <div className="feedContainer">
-           <h1>Feed</h1>
+        <div className="feed">
+           <div className="feedWrapper">
+            <Share />
+                {
+                    Posts.map((post) => {
+                        return <Post key={post.id} post = {post} />
+                    })
+                }
+           </div>
         </div>
     </>
 }

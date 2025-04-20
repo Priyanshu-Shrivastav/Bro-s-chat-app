@@ -1,11 +1,10 @@
 import './home.css';
-// import Topbar from './components/topbar/Topbar';
 
 import React from 'react'
 import Sidebar from '../../components/sidebar/Sidebar';
 import Feed from '../../components/feed/Feed';
-import RightSidebar from '../../components/rightSidebar/RightSidebar';
 import Topbar from '../../components/topbar/Topbar';
+import Rightbar from '../../components/rightbar/Rightbar';
 
 const Home = () => {
   return (
@@ -14,7 +13,7 @@ const Home = () => {
       <div className="homeContainer">
         <Sidebar />
         <Feed />
-        <RightSidebar />
+        <Rightbar />
       </div>
     </>
   )

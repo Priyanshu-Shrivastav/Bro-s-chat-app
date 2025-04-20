@@ -7,6 +7,8 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import EventIcon from "@mui/icons-material/Event";
 import SchoolIcon from "@mui/icons-material/School";
+import CloseFriend from "../closeFriend/CloseFriend";
+import { Users } from "../../DummyData";
 import "./sidebar.css";
 
 const Sidebar = () => {
@@ -55,10 +57,10 @@ const Sidebar = () => {
           <button className="sidebarButton">Show More</button>
           <hr className="sidebarHr" />
           <ul className="sidebarFriendList">
-            <li className="sidebarFriend">
-              <img src="" alt="" className="sidebarFriendImg" />
-              <span className="sidebarFriendName">Priyanshu Shaw</span>
-            </li>
+            {Users.map((u) => (
+              <CloseFriend key={u.id} user={u} />
+            ))}
+            
           </ul>
         </div>
       </div>
